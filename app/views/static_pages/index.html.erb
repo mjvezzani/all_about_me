@@ -1,0 +1,7 @@
+<% @posts.each do |p| %>
+  <div>
+    <h3><%= p.title %></h3>
+    <p><%= p.body.truncate(175, separator: ' ', omission: '... (continued)') %></p>
+    <p><%= p.date %></p>
+  </div>
+<% end %>
