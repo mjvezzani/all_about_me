@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @favorite_web_thing.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @favorite_web_thing.body %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @favorite_web_thing.img_url %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @favorite_web_thing.url %>
+</p>
+
+<%= link_to 'Edit', edit_favorite_web_thing_path(@favorite_web_thing) %> |
+<%= link_to 'Back', favorite_web_things_path %>

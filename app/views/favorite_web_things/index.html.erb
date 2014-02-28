@@ -1,0 +1,33 @@
+<h1>My Favorite Webby Things</h1>
+<%= link_to 'New Favorite web thing', new_favorite_web_thing_path, class: "button small" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Img url</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorite_web_things.each do |favorite_web_thing| %>
+      <tr>
+        <td><%= favorite_web_thing.title %></td>
+        <td><%= favorite_web_thing.body %></td>
+        <td><%= favorite_web_thing.img_url %></td>
+        <td><%= favorite_web_thing.url %></td>
+        <td><%= link_to 'Show', favorite_web_thing %></td>
+        <td><%= link_to 'Edit', edit_favorite_web_thing_path(favorite_web_thing) %></td>
+        <td><%= link_to 'Destroy', favorite_web_thing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

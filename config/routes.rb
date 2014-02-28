@@ -1,4 +1,6 @@
 AllAboutMe::Application.routes.draw do
+  resources :favorite_web_things
+
   resources :posts
 
   get "/index" => 'static_pages#index'

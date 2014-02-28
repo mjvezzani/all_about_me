@@ -16,18 +16,67 @@
 
 $background-color: #EFFFFF;
 
-.row {
+.first {
   background-color: $background-color;
   padding: 2.5em;
+  margin: 0 1.5em 0 1.5em;
   /* opacity: 0.9; */
   border-radius: 5px;
+}
+
+div.panel h2 {
+  color: white;
+  text-shadow: 0 0 10px #222;
+}
+
+div.panel small {
+  color: white;
+  text-shadow: 0 0 10px #444;
+  font-weight: 100;
+  font-style: italic;
+}
+
+div.row .blue {
+  background-color: #5A8CC8;
+}
+
+.add-rounded-corners-sm {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .top-margin {
   margin-top: 1.5em;
 }
 
+.horizontal-rule-left {
+  border-left: 2px solid #CCC;
+}
+
 .darken-back {
   background-color: darken( #CCC, 5% );
   opacity: 2.4;
+}
+
+.blog-snippet {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: lighten(rgb(189, 145, 90), 30%);
+  border: 5px dashed rgb(189, 145, 90);
+  -moz-box-shadow: 0px 3px 2px 5px #333;
+  -webkit-box-shadow: 0px 3px 2px 5px #333;
+  box-shadow: 0px 3px 10px 5px #888;
+  padding: 1em;
+  margin: 1em;
+}
+
+.top-bottom-border {
+  padding-top: 10px;
+  border-top: 1px solid #999;
+}
+
+aside a:hover {
+  color: black;
 }

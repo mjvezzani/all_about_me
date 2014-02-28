@@ -1,7 +1,40 @@
-<% @posts.each do |p| %>
-  <div>
-    <h3><%= p.title %></h3>
-    <p><%= p.body.truncate(175, separator: ' ', omission: '... (continued)') %></p>
-    <p><%= p.date %></p>
+<div class="small-12 medium-12 large-12 columns">
+  <div class="panel add-rounded-corners-sm">
+    <h2>The Modern Day Renaissance Agrarian</h2>
+    <hr />
+    <div class="row">
+      <div class="small-12 medium-6 large-9 columns blue">
+        <h2><small>My name is Mike. I love life and am passionate about sustainable agriculture.
+        I relax listening to Jimmy Smith and Freddy Mercury, reading Wendell Berry and Michael Pollan,
+        and watching Stephen Colbert and Zak Orth. I am uncomfortable when I'm not learning or working
+        with my hands.</small></h2>
+      </div>
+      <div class="small-12 medium-6 large-3 columns">
+        <%= image_tag("profile.jpg", class: "th") %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
+<div class="small-12 medium-8 large-8 columns">
+  <h2>Recent blog entries:</h2>
+  <% @posts.each do |p| %>
+    <div class="blog-snippet">
+      <h3><%= p.title %></h3>
+      <p><%= p.body.truncate(175, separator: ' ', omission: "...") %></p>
+      <p><%= link_to "Read More", p %></p>
+      <p><%= p.date %></p>
+    </div>
+  <% end %>
+</div>
+<aside class="small-12 medium-4 large-4 columns horizontal-rule-left">
+  <h4>Favorite Webby Things:</h4>
+  <% @fav_webbys.each do |f| %>
+    <div class="top-bottom-border">
+      <a href=<%="#{f.url}"%>>
+        <%= image_tag("#{f.img_url}", class: "th") %>
+        <h5><%= f.title %></h5>
+        <p><%= f.body %></p>
+      </a>
+    </div>
+  <% end %>
+</aside>
