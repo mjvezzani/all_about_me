@@ -19,8 +19,8 @@
   <h2>Recent blog entries:</h2>
   <% @posts.each do |p| %>
     <div class="blog-snippet">
-      <h3><%= p.title %></h3>
-      <p><%= p.body.truncate(175, separator: ' ', omission: "...") %></p>
+      <h3><%= link_to "#{p.title}", post_path(p) %></h3>
+      <p><%= raw(p.body.truncate(305, separator: ' ', omission: "...")) %></p>
       <p><%= link_to "Read More", p %></p>
       <p><%= p.date %></p>
     </div>
@@ -29,12 +29,12 @@
 <aside class="small-12 medium-4 large-4 columns horizontal-rule-left">
   <h4>Favorite Webby Things:</h4>
   <% @fav_webbys.each do |f| %>
-    <div class="top-bottom-border">
-      <a href=<%="#{f.url}"%>>
+    <a href=<%="#{f.url}"%>>
+      <div class="top-bottom-border">
         <%= image_tag("#{f.img_url}", class: "th") %>
         <h5><%= f.title %></h5>
         <p><%= f.body %></p>
-      </a>
-    </div>
+      </div>
+    </a>
   <% end %>
 </aside>
