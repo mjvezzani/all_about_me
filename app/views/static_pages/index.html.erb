@@ -19,10 +19,16 @@
   <h2>Recent blog entries:</h2>
   <% @posts.each do |p| %>
     <div class="blog-snippet">
-      <h3><%= link_to "#{p.title}", post_path(p) %></h3>
+      <div class="row">
+        <div class="small-8 columns">
+          <h3><%= link_to "#{p.title}", post_path(p) %></h3>
+        </div>
+        <div class="small-4 columns">
+          <h4><%= p.date %></h4>
+        </div>
+      </div>
       <p><%= raw(p.body.truncate(305, separator: ' ', omission: "...")) %></p>
       <p><%= link_to "Read More", p %></p>
-      <p><%= p.date %></p>
     </div>
   <% end %>
 </div>

@@ -40,6 +40,9 @@
     <div class="row first">
       <%= yield %>
       <%= javascript_include_tag "application" %>
+      <footer class="small-12 columns">
+        <p>Copyright <%= DateTime.now.strftime("%Y") %>, Mike Vezzani</p>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,3 +1,9 @@
+a:hover {
+  background-color: #E9DAC7;
+  color: #000;
+  transition: color 300ms ease 0s;
+}
+
 .button {
   color: #DDD;
   background-color: #888;
@@ -11,4 +17,26 @@
 
 textarea {
   height: auto;
+}
+
+.name h1 a:hover {
+  transition: all 300ms ease;
+  color: green;
+  background-color: yellow;
+}
+
+footer {
+  color: white;
+  background-color: #5A8CC8;
+  margin-top: .5em;
+  border-bottom-left-radius: 25px 20px;
+  border-bottom-right-radius: 25px 20px;
+}
+
+footer p {
+  margin: .5em;
+}
+
+body {
+  margin-bottom: 1em;
 }
